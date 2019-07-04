@@ -29,24 +29,64 @@
 	}
 	dd{
 		padding-left: 10px;
-	}
+    }
+
+
+    h1 {
+        width: 260px;
+        float: left;
+    }
+    h1::after{
+        clear: both;
+    }
+    p {
+        width: 340px;
+        float: right;
+    }
+    dt {
+        width: 48px;
+        float: right;
+    }
+    dd {
+        width: 240px;
+        float: left;
+    }
+    /* div::after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+    dl::after{
+        content: '';
+        display: block;
+        clear: both;
+    } */
+    .cf::after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+
 	</style>
 </head>
 <body>
 <div class="container">
-	<div class="content">
+	<div class="content cf">
 		<h1>Clearfixとは</h1>
 		<p>便利だけど、使い方が少しややこしいですね。<br>
 		まずは、横並びになった要素の親要素を見つける練習から始めましょう。</p>
 	</div>
-	<dl>
+	<dl class="cf">
 		<dt><img src="css.png" alt="CSSソース"></dt>
-		<dd><pre>:after{
-content: '';
-display: block;
-clear: both;
-}</pre></dd>
-	</dl>
+		<dd><pre>
+            :after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+        </pre></dd>
+    </dl>
 </div>
 </body>
 </html>
